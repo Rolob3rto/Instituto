@@ -18,7 +18,7 @@
     <title>Biblioteca home</title>
 </head>
 <body>
-    
+    <h2>Biblioteca</h2>
     <button><a href="listadoLibros.php">Libros</a></button>
     <button><a href="">Socios</a></button>
 </body>
