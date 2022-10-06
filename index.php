@@ -5,9 +5,9 @@
     $libros = array();
 
 
-    //if (isset($_SESSION['arrayLibros']) == false) {
+    if (isset($_SESSION['arrayLibros']) == false) {
         $_SESSION['arrayLibros'] = $libros;
-    //}
+    }
 ?>
 <!DOCTYPE html>
 <html lang="es">

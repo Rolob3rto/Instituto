@@ -89,7 +89,7 @@
             echo "<input type='hidden' name='autor' value='$obj->autor'>";
             echo "<button type='submit'>Editar</button>";
             echo "</form>";
-            echo "<form action='borrarLibros.php' method='post'>";
+            echo "<form action='borrarLibro.php' method='post'>";
             echo "<input type='hidden' name='isbn' value='$obj->isbn'>";
             echo "<button type='submit'>Borrar</button>";
             echo "</form></td>";
