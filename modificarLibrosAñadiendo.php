@@ -9,16 +9,14 @@
         $libro ->titulo = $_POST['titulo'];
         $libro ->autor = $_POST['autor']; */
         
-        $libros = $_SESSION['arrayLibros'];        
+        $libros = $_SESSION['arrayLibros'];                
 
         for ($i=0; $i < count($libros); $i++) { 
             if ($libros[$i]->isbn == $_POST['isbn']) {
-                unset($libros[$i]);
+                $libros[$i] = $libro;
+                break;
             }
         }
-
-
-        array_push($libros, $libro);
 
         $_SESSION['arrayLibros'] = $libros;
 

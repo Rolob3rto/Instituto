@@ -16,11 +16,11 @@
 </head>
 <body>
     <form action="modificarLibrosAñadiendo.php" method="post">
-        <label>isbn: <input name="isbn" type="text" value='<?= $_POST['isbn']?>' disabled></label>
+        <label>isbn: <input name="isbn" type="text" value='<?= $_POST['isbn']?>' ></label>
         <label>titulo: <input name="titulo" type="text" value='<?= $_POST['titulo']?>'></label>
         <label>autor: <input name="autor" type="text" value='<?= $_POST['autor']?>'></label>
         <br/>
-        <button type="submit">Dar de alta</button>
+        <button type="submit">Modificar</button>
     </form>
 </body>
 </html>
