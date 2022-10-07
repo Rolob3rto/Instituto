@@ -20,6 +20,7 @@
         th{
             border: 1px solid black;
             padding: 1em;
+            background-color: darkgray;
         }       
         tr:nth-child(2){
             color: white;
@@ -29,6 +30,10 @@
             text-align: center;
             background-color: white;
             padding: 1em;
+        }
+        td:nth-child(6){
+            display: flex;
+            flex-direction: row;
         }
 
         table {
