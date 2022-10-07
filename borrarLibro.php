@@ -10,6 +10,8 @@
             if ($libros[$i]->isbn == $_POST['isbn']) {
                 array_splice($libros, $i, 1);                
                 break;
+                $libros = $_SESSION['arrayLibros'];                
+        
             }
         }
 
