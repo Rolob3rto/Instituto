@@ -15,10 +15,12 @@
     </style>
 </head>
 <body>
-    <form action="altaLibrosAñadiendo.php" method="post">
-        <label>isbn: <input name="isbn" type="text"></label>
-        <label>titulo: <input name="titulo" type="text"></label>
-        <label>autor: <input name="autor" type="text"></label>
+    <form action="altaSociosAñadiendo.php" method="post">
+        <label>Dni: <input name="Dni" type="text"></label>
+        <label>Nombre: <input name="Nombre" type="text"></label>
+        <label>Apellidos: <input name="Apellidos" type="text"></label>
+        <label>Edad: <input name="Edad" type="text"></label>
+        <label>Dirección: <input name="Direccion" type="text"></label>
         <br/>
         <button type="submit">Dar de alta</button>
     </form>
