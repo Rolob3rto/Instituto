@@ -19,6 +19,7 @@
         }
         th{
             border: 1px solid black;
+            padding: 1em;
         }       
         tr:nth-child(2){
             color: white;
@@ -41,13 +42,13 @@
 </head>
 
 <body>
-    <h1>Listado Libros</h1>
+    <h1>Listado Socios</h1>
 
     <table>
         <tr>
             <th>---</th>
-            <th>listado</th>
             <th>---</th>
+            <th>listado</th>
             <th>Socios</th>
             <th>---</th>
             <th>---</th>

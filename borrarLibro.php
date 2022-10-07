@@ -17,6 +17,6 @@
 
         $_SESSION['arrayLibros'] = $libros;
 
-        header("Location: https://localhost/app-php/biblioteca/listadoLibros.php");
+        header("Location: listadoLibros.php");
     }
 ?>

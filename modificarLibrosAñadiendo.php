@@ -4,10 +4,6 @@
         session_start();
 
         $libro = new Libro($_POST['isbn'], $_POST['titulo'], $_POST['autor']);
-
-        /* $libro ->isbn = $_POST['isbn'];
-        $libro ->titulo = $_POST['titulo'];
-        $libro ->autor = $_POST['autor']; */
         
         $libros = $_SESSION['arrayLibros'];                
 

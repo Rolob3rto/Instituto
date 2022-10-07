@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modificacion de Socio</title>
     <style>
-        body, label, button{
+        body, label, button, form{
             display: flex;
             align-items: center;
             justify-content: space-around;        
             padding: 0.5em;    
+            flex-direction: column;
+        }
+        label{
+            display: flex;
+            flex-direction: row;            
         }
     </style>
 </head>

@@ -1,5 +1,6 @@
 <?php
-
+    require("libreria.php");
+    require("socios.php");
     session_start();
 
     $libros = array();
@@ -7,10 +8,24 @@
 
 
     if (isset($_SESSION['arrayLibros']) == false) {
+
+        $libro = new Libro('isbn1','titulo1' ,'autor1');
+        array_push($libros, $libro);
+        $libro = new Libro('isbn2','titulo2' ,'autor2');
+        array_push($libros, $libro);
+        $libro = new Libro('isbn3','titulo3' ,'autor3');
+        array_push($libros, $libro);
+
         $_SESSION['arrayLibros'] = $libros;
     }
 
     if (isset($_SESSION['arraySocios']) == false) {
+        $socio = new Socio('Dni1', 'Nombre1', 'Apellidos1', 'Edad1', 'Direccion1');
+        array_push($socios, $socio);
+        $socio = new Socio('Dni2', 'Nombre2', 'Apellidos2', 'Edad2', 'Direccion2');
+        array_push($socios, $socio);
+        $socio = new Socio('Dni3', 'Nombre3', 'Apellidos3', 'Edad3', 'Direccion3');
+
         $_SESSION['arraySocios'] = $socios;
     }
 ?>

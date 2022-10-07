@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listado de libros</title>
     <style>
-        body {
+       body {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -19,6 +19,7 @@
         }
         th{
             border: 1px solid black;
+            padding: 1em;
         }       
         tr:nth-child(2){
             color: white;

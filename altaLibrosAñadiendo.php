@@ -4,10 +4,6 @@
         session_start();
 
         $libro = new Libro($_POST['isbn'], $_POST['titulo'], $_POST['autor']);
-
-        /* $libro ->isbn = $_POST['isbn'];
-        $libro ->titulo = $_POST['titulo'];
-        $libro ->autor = $_POST['autor']; */
         
         $libros = $_SESSION['arrayLibros'];
 
@@ -15,6 +11,6 @@
 
         $_SESSION['arrayLibros'] = $libros;
 
-        header("Location: https://localhost/app-php/biblioteca/listadoLibros.php");
+        header("Location: listadoLibros.php");
     }
 ?>
