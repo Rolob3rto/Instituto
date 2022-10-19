@@ -1,19 +1,19 @@
 <?php
 
-class Socio{
+class Alumno{
 
     public $Dni = null;
     public $Nombre = null;
     public $Apellidos = null;
-    public $Edad = null;
+    public $Correo = null;
     public $Direccion = null;
 
-    function __construct($Dni, $Nombre, $Apellidos, $Edad, $Direccion)
+    function __construct($Dni, $Nombre, $Apellidos, $Correo, $Direccion)
     {
         $this->Dni = $Dni;
         $this->Nombre = $Nombre;
         $this->Apellidos = $Apellidos;
-        $this->Edad = $Edad;
+        $this->Correo = $Correo;
         $this->Direccion = $Direccion;
     } 
     function getDni(){
@@ -29,9 +29,9 @@ class Socio{
     {
         return $this->Apellidos;
     }
-    public function getEdad()
+    public function getCorreo()
     {
-        return $this->Edad;
+        return $this->Correo;
     }
     public function getDireccion()
     {

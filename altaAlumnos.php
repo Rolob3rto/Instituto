@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modificacion de libro</title>
+    <title>Alta de alumno</title>
     <style>
         body, label, button, form{
             display: flex;
@@ -20,12 +20,14 @@
     </style>
 </head>
 <body>
-    <form action="modificarLibrosAñadiendo.php" method="post">
-        <label>isbn: <input name="isbn" type="text" value='<?= $_POST['isbn']?>' ></label>
-        <label>titulo: <input name="titulo" type="text" value='<?= $_POST['titulo']?>'></label>
-        <label>autor: <input name="autor" type="text" value='<?= $_POST['autor']?>'></label>
+    <form action="altaAlumnoAñadiendo.php" method="post">
+        <label>Dni: <input name="Dni" type="text"></label>
+        <label>Nombre: <input name="Nombre" type="text"></label>
+        <label>Apellidos: <input name="Apellidos" type="text"></label>
+        <label>Correo: <input name="Correo" type="text"></label>
+        <label>Dirección: <input name="Direccion" type="text"></label>
         <br/>
-        <button type="submit">Modificar</button>
+        <button type="submit">Dar de alta</button>
     </form>
 </body>
 </html>

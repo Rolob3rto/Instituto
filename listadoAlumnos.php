@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listado de Socios</title>
+    <title>Listado de Alumnos</title>
     <style>
         body {
             display: flex;
@@ -47,14 +47,14 @@
 </head>
 
 <body>
-    <h1>Listado Socios</h1>
+    <h1>Listado Alumnos</h1>
 
     <table>
         <tr>
             <th>---</th>
             <th>---</th>
             <th>listado</th>
-            <th>Socios</th>
+            <th>Alumnos</th>
             <th>---</th>
             <th>---</th>
         </tr>
@@ -62,48 +62,42 @@
             <th>Dni</th>
             <th>Nombre</th>
             <th>Apellidos</th>
-            <th>Edad</th>
+            <th>Correo</th>
             <th>Direccion</th>
             <th>
-                <form action="altaSocios.php" method="post">
-                    <button type="submit">Nuevo socio</button>
+                <form action="altaAlumnos.php" method="post">
+                    <button type="submit">Nuevo alumno</button>
                 </form>
             </th>
         </tr>
 
         <?php
-            require 'socios.php';
+            require 'alumnos.php';
 
         session_start();
 
-        $arraySocios = $_SESSION['arraySocios'];
+        $arrayAlumnos = $_SESSION['arrayAlumnos'];
 
-        //print_r($arraySocios);
+        //print_r($arrayAlumnos);
 
-        for ($i = 0; $i < count($arraySocios); $i++) {
-            $obj = $arraySocios[$i];
-            /* echo "<tr>
-                <td>ej-Nombre</td>
-                <td>ej-tit</td>
-                <td>ej-Dni</td>
-                <td><button>editar</button>
-                <button>borrar</button></td>
-            </tr>"; */
+        for ($i = 0; $i < count($arrayAlumnos); $i++) {
+            $obj = $arrayAlumnos[$i];
+            
             echo "<tr>"; 
             echo "<td>$obj->Dni</td>";
             echo "<td>$obj->Nombre</td>";
             echo "<td>$obj->Apellidos</td>";
-            echo "<td>$obj->Edad</td>";
+            echo "<td>$obj->Correo</td>";
             echo "<td>$obj->Direccion</td>";
-            echo "<td><form action='modificarSocios.php' method='post'>";
+            echo "<td><form action='modificarAlumno.php' method='post'>";
             echo "<input type='hidden' name='Dni' value='$obj->Dni'>";
             echo "<input type='hidden' name='Nombre' value='$obj->Nombre'>";
             echo "<input type='hidden' name='Apellidos' value='$obj->Apellidos'>";
-            echo "<input type='hidden' name='Edad' value='$obj->Edad'>";
+            echo "<input type='hidden' name='Correo' value='$obj->Correo'>";
             echo "<input type='hidden' name='Direccion' value='$obj->Direccion'>";
             echo "<button type='submit'>Editar</button>";
             echo "</form>";
-            echo "<form action='borrarSocio.php' method='post'>";
+            echo "<form action='borrarAlumno.php' method='post'>";
             echo "<input type='hidden' name='Dni' value='$obj->Dni'>";
             echo "<button type='submit'>Borrar</button>";
             echo "</form></td>";

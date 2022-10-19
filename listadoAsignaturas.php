@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listado de libros</title>
+    <title>Listado de Asignaturas</title>
     <style>
-       body {
+        body {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -31,7 +31,7 @@
             background-color: white;
             padding: 1em;
         }
-        td:nth-child(4){
+        td:nth-child(6){
             display: flex;
             flex-direction: row;
         }
@@ -47,56 +47,46 @@
 </head>
 
 <body>
-    <h1>Listado Libros</h1>
+    <h1>Listado Asignaturas</h1>
 
     <table>
         <tr>
             <th>---</th>
-            <th>listado</th>
-            <th>libros</th>
+            <th>listado Asignaturas</th>
             <th>---</th>
         </tr>
         <tr>
-            <th>isbn</th>
-            <th>titulo</th>
-            <th>autor</th>
+            <th>Codigo</th>
+            <th>Descripcion</th>           
             <th>
-                <form action="altaLibros.php" method="post">
-                    <button type="submit">Nuevo libro</button>
+                <form action="altaAsignaturas.php" method="post">
+                    <button type="submit">Nueva asignatura</button>
                 </form>
             </th>
         </tr>
 
         <?php
-            require 'libreria.php';
+            require 'asignaturas.php';
 
         session_start();
 
-        $arrayLibros = $_SESSION['arrayLibros'];
+        $arrayAsignaturas = $_SESSION['arrayAsignaturas'];
 
-        //print_r($arrayLibros);
+        //print_r($arrayAsignaturas);
 
-        for ($i = 0; $i < count($arrayLibros); $i++) {
-            $obj = $arrayLibros[$i];
-            /* echo "<tr>
-                <td>ej-isbn</td>
-                <td>ej-tit</td>
-                <td>ej-autor</td>
-                <td><button>editar</button>
-                <button>borrar</button></td>
-            </tr>"; */
+        for ($i = 0; $i < count($arrayAsignaturas); $i++) {
+            $obj = $arrayAsignaturas[$i];
+
             echo "<tr>"; 
-            echo "<td>$obj->isbn</td>";
-            echo "<td>$obj->titulo</td>";
-            echo "<td>$obj->autor</td>";
-            echo "<td><form action='modificarLibros.php' method='post'>";
-            echo "<input type='hidden' name='isbn' value='$obj->isbn'>";
-            echo "<input type='hidden' name='titulo' value='$obj->titulo'>";
-            echo "<input type='hidden' name='autor' value='$obj->autor'>";
+            echo "<td>$obj->Codigo</td>";
+            echo "<td>$obj->Descripcion</td>";            
+            echo "<td><form action='modificarAsignatura.php' method='post'>";
+            echo "<input type='hidden' name='Codigo' value='$obj->Codigo'>";
+            echo "<input type='hidden' name='Descripcion' value='$obj->Descripcion'>";            
             echo "<button type='submit'>Editar</button>";
             echo "</form>";
-            echo "<form action='borrarLibro.php' method='post'>";
-            echo "<input type='hidden' name='isbn' value='$obj->isbn'>";
+            echo "<form action='borrarAsignatura.php' method='post'>";
+            echo "<input type='hidden' name='Codigo' value='$obj->Codigo'>";
             echo "<button type='submit'>Borrar</button>";
             echo "</form></td>";
             echo "</tr>";

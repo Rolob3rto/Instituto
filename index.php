@@ -1,32 +1,34 @@
 <?php
-    require("libreria.php");
-    require("socios.php");
+    require("alumnos.php");
+    require("asignaturas.php");
     session_start();
 
-    $libros = array();
-    $socios = array();
+  
+    $alumnos = array();
 
 
-    if (isset($_SESSION['arrayLibros']) == false) {
+    if (isset($_SESSION['arrayAlumnos']) == false) {
+        $alumno = new Alumno('Dni1', 'Nombre1', 'Apellidos1', 'Correo1', 'Direccion1');
+        array_push($alumnos, $alumno);
+        $alumno = new Alumno('Dni2', 'Nombre2', 'Apellidos2', 'Correo2', 'Direccion2');
+        array_push($alumnos, $alumno);
+        $alumno = new Alumno('Dni3', 'Nombre3', 'Apellidos3', 'Correo3', 'Direccion3');
+        array_push($alumnos, $alumno);
 
-        $libro = new Libro('isbn1','titulo1' ,'autor1');
-        array_push($libros, $libro);
-        $libro = new Libro('isbn2','titulo2' ,'autor2');
-        array_push($libros, $libro);
-        $libro = new Libro('isbn3','titulo3' ,'autor3');
-        array_push($libros, $libro);
-
-        $_SESSION['arrayLibros'] = $libros;
+        $_SESSION['arrayAlumnos'] = $alumnos;
     }
+    $asignaturas = array();
 
-    if (isset($_SESSION['arraySocios']) == false) {
-        $socio = new Socio('Dni1', 'Nombre1', 'Apellidos1', 'Edad1', 'Direccion1');
-        array_push($socios, $socio);
-        $socio = new Socio('Dni2', 'Nombre2', 'Apellidos2', 'Edad2', 'Direccion2');
-        array_push($socios, $socio);
-        $socio = new Socio('Dni3', 'Nombre3', 'Apellidos3', 'Edad3', 'Direccion3');
 
-        $_SESSION['arraySocios'] = $socios;
+    if (isset($_SESSION['arrayAsignaturas']) == false) {
+        $asignatura = new Asignatura('Codigo1', 'Descripcion1');
+        array_push($asignaturas, $asignatura);
+        $asignatura = new Asignatura('Codigo2', 'Descripcion2');
+        array_push($asignaturas, $asignatura);
+        $asignatura = new Asignatura('Codigo3', 'Descripcion3');
+        array_push($asignaturas, $asignatura);
+
+        $_SESSION['arrayAsignaturas'] = $asignaturas;
     }
 ?>
 <!DOCTYPE html>
@@ -35,11 +37,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblioteca home</title>
+    <title>Instituto home</title>
 </head>
 <body>
-    <h2>Biblioteca</h2>
-    <button><a href="listadoLibros.php">Libros</a></button>
-    <button><a href="listadoSocios.php">Socios</a></button>
+    <h2>Instituto</h2>
+    <button><a href="listadoAlumnos.php">Alumnos</a></button>
+    <button><a href="listadoAsignaturas.php">Asignaturas</a></button>
 </body>
 </html>
